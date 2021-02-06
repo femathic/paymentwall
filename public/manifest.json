@@ -1,0 +1,35 @@
+{
+  "short_name": "Payment Wall",
+  "name": "Payment Wall",
+  "scope": "/",
+  "description": "Expand into more markets and streamline your payment experiences in local markets with the all-in-one payment platform.",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "256x256",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "logo192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "logo512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    },
+    {
+      "src": "maskable_icon.png",
+      "sizes": "196x196",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "/",
+  "orientation": "portrait",
+  "display": "standalone",
+  "theme_color": "#FFBB36",
+  "background_color": "#ffffff",
+  "splash_pages": null
+}

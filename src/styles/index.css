@@ -1,0 +1,30 @@
+/* index css  */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "Maiandra GD Bold";
+    src: local('Maiandra GD'), url("./fonts/MaiandraBold.ttf");
+    font-display: swap;
+}
+@font-face {
+    font-family: "Maiandra GD Regular";
+    src: local('Maiandra GD Regular'), url("./fonts/MaiandraRegular.ttf");
+    font-display: swap;
+}
+
+body {
+  position:relative;
+  padding: 0;
+  margin: 0;
+  font-family: 'Montserrat','Maiandra GD', Roboto, Helvetica, Arial, sans-serif;
+}
+
+.maiandra {
+  font-family: "Maiandra GD";
+}
+
+.maiandra-bold {
+  font-family: "Maiandra GD Bold";
+}

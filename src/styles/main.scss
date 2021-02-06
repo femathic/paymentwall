@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap');
+.theme-background {
+  background: linear-gradient(90.6deg, #FFBB36 0.42%, #141416 99.69%);
+}
+.theme-border {
+  border: 2.5px solid #FFBB36;
+}
+.theme-text {
+  color: #FFBB36;
+}
+.theme-text-alt {
+  color: #141416 ;
+}
+.active-nav {
+  border-left-width: 4px;
+  border-color: #FFBB36;
+}
+.active-nav-sm {
+  border-bottom-width: 4px;
+  border-color: #FFBB36;
+}
+.loader {
+  border-top-color: #FFBB36;
+  -webkit-animation: spinner 1.5s linear infinite;
+  animation: spinner 1.5s linear infinite;
+}
+
+@-webkit-keyframes spinner {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spinner {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.whitespace-nowrap{
+  white-space: nowrap;
+}
+
+.group:hover .group-hover\:block {
+  color: #fff;
+  display: block;
+}
+
+.group:hover .group-hover\:visible {
+  color: #fff;
+  visibility: visible;
+}
