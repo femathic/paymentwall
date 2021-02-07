@@ -8,7 +8,7 @@ const PaymentMethods = (
   const [loading, setLoading] = useState(true);
   useEffect(() => {
     setLoading(true);
-    useFetch('get', `https://api.paymentwall.com/api/payment-systems/?key=571059a31988f9ca9074225cc21536a2&country_code=${paymentDetail.countryCode}`, null)
+    useFetch('get', `https://api.paymentwall.com/api/payment-systems/?key=${process.env.REACT_APP_API_KEY}&country_code=${paymentDetail.countryCode}`, null)
       .then((response) => {
         if (response && response.data) {
           setPaymentMethodList(response.data);
@@ -22,8 +22,6 @@ const PaymentMethods = (
       setLoading(true);
     };
   }, [paymentDetail.countryCode]);
-
-  useEffect(() => console.log(paymentMethodList, loading), [paymentMethodList, loading]);
 
   return (
     <div className="col-span-12 lg:col-span-5 bg-white dark:bg-themeBlack shadow-lg px-8 xl:px-16 py-10 text-themeBlack dark:text-white rounded">

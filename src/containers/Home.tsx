@@ -15,7 +15,7 @@ const Home = ({ toggleDarkMode }: { toggleDarkMode: Function }) => {
     country: '', countryName: '', countryCode: '', defaultCountry: '', defaultCountryCode: '', currency: 'USD', amount: '0.00', paymentMethod: '',
   });
   useEffect(() => {
-    useFetch('get', 'http://ip-api.com/json', null)
+    useFetch('get', 'https://extreme-ip-lookup.com/json/', null)
       .then((response: any) => {
         setPaymentDetail({
           ...paymentDetail,
