@@ -6,7 +6,7 @@ module.exports = {
   purge: {
     mode: 'all',
     preserveHtmlElements: true,
-    content: ['./public/*.html', './src/**/*.jsx', './src/**/*.js', './src/*.js', './src/*.jsx'],
+    content: ['./public/*.html', './src/**/*.jsx', './src/**/*.js', './src/**/*.tsx', './src/*/*.jsx', './src/*/*.js', './src/*/*.tsx', './src/*.js', './src/*.jsx', './src/*.tsx'],
     options: {
       safelist: ['themePurple', 'themePink'],
       blocklist: [/^debug-/],

@@ -1,6 +1,6 @@
 import { Suspense, lazy, useEffect } from 'react';
 import {
-  BrowserRouter as Router, Switch, Route,
+  BrowserRouter as Router, Switch, Route, Redirect,
 } from 'react-router-dom';
 import { GlobalProvider } from './context/GlobalState';
 import useLocalStorage from './utils/useLocalStorage';
@@ -28,6 +28,7 @@ const Layout = ({ Loader }: { Loader: any }) => {
         <div className={`w-full min-h-screen p-0 m-0 transform transition-all duration-700 ease-in-out ${darkMode ? 'scheme-dark bg-black' : 'bg-white'}`}>
           <Suspense fallback={<Loader />}>
             <Switch>
+              <Redirect exact from="/paymentwall" to="/" />
               <Route exact path="/">
                 <Home toggleDarkMode={() => setDarkMode(!darkMode)} />
               </Route>
