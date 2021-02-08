@@ -3,16 +3,18 @@ import { useRef, useEffect } from 'react';
 const PaymentSummary = (
   { paymentDetail, setPaymentDetail }: { paymentDetail: any, setPaymentDetail: Function },
 ) => {
-  const amountInput: any = useRef(null);
+  const amountInput: any = useRef();
   useEffect(() => {
     if (amountInput.current) amountInput.current.focus();
-  }, []);
+  }, [amountInput.current]);
 
   return (
     <div className="relative py-5 flex items-center flex-wrap bg-white dark:bg-themeBlack shadow-lg px-8 xl:px-16 pt-10 pb-8 text-themeBlack dark:text-white rounded">
       <label htmlFor="country">
+        <p className="font-bold text-sm md:text-base hidden">Country:</p>
         <select
           id="country"
+          name="country"
           value={paymentDetail.country}
           onChange={(e) => {
             setPaymentDetail({
@@ -33,8 +35,10 @@ const PaymentSummary = (
         <p className="text-sm md:text-base text-themeYellow mb-4 font-bold">Amount</p>
         <div className="flex items-start">
           <label htmlFor="currency" className="inline flex items-start">
+            <p className="font-bold text-sm md:text-base hidden">Currency:</p>
             <select
               id="currency"
+              name="currency"
               value={paymentDetail.currency}
               onChange={(e) => setPaymentDetail({ ...paymentDetail, currency: e.target.value })}
               className="inline w-14 md:w-16 text-sm md:text-base bg-white dark:bg-themeBlack text-black dark:text-white font-bold focus:outline-none border-0 cursor-pointer"

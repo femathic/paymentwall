@@ -1,7 +1,7 @@
 /* eslint-disable no-plusplus */
 /* eslint-disable no-mixed-operators */
 /* eslint-disable eqeqeq */
-const validateCard = (sixteenDigitString: any) => {
+const validateCardNumber = (sixteenDigitString: any) => {
   let numSum = 0;
   let value;
   for (let i = 0; i < 16; ++i) {
@@ -18,4 +18,4 @@ const validateCard = (sixteenDigitString: any) => {
   return (numSum % 10 == 0);
 };
 
-export default validateCard;
+export default validateCardNumber;

@@ -671,6 +671,10 @@ video {
   cursor: pointer;
 }
 
+.disabled\:cursor-not-allowed:disabled {
+  cursor: not-allowed;
+}
+
 .block {
   display: block;
 }
@@ -725,6 +729,10 @@ video {
 
 .justify-between {
   justify-content: space-between;
+}
+
+.font-normal {
+  font-weight: 400;
 }
 
 .font-medium {
@@ -886,6 +894,10 @@ video {
 
 .hover\:opacity-75:hover {
   opacity: 0.75;
+}
+
+.disabled\:opacity-50:disabled {
+  opacity: 0.5;
 }
 
 .focus\:outline-none:focus {

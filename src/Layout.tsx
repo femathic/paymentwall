@@ -28,10 +28,10 @@ const Layout = ({ Loader }: { Loader: any }) => {
         <div className={`w-full min-h-screen p-0 m-0 transform transition-all duration-700 ease-in-out ${darkMode ? 'scheme-dark bg-black' : 'bg-white'}`}>
           <Suspense fallback={<Loader />}>
             <Switch>
-              <Route exact path="/">
+              <Route exact path="/paymentwall">
                 <Home toggleDarkMode={() => setDarkMode(!darkMode)} />
               </Route>
-              <Route exact path="/paymentwall">
+              <Route exact path="/">
                 <Home toggleDarkMode={() => setDarkMode(!darkMode)} />
               </Route>
               <Route path="/error">
